@@ -1,10 +1,10 @@
-# ✈️ Asistent de Călătorie — Proiect Web Semantic
+# Asistent de Călătorie — Proiect Web Semantic
  
 Un asistent de călătorie inteligent care combină 3 surse de date semantice cu un LLM (OpenAI GPT-4o-mini) prin arhitectura MCP (Model Context Protocol). Utilizatorul poate întreba în limbaj natural despre zboruri, hoteluri și atracții turistice.
  
 ---
  
-## 🏗️ Arhitectura proiectului
+## Arhitectura
  
 ```
 Utilizator (limbaj natural)
@@ -28,7 +28,7 @@ client.js — MCP Client (port 5000)
  
 ---
  
-## 📦 Surse de date
+## Surse de date
  
 ### 1. RDF4J — Aeronave și Zboruri
 - **Tehnologie:** Bază de grafuri RDF, interogări SPARQL
@@ -50,7 +50,7 @@ client.js — MCP Client (port 5000)
 - **Port:** 3000 (obligatoriu conform cerințelor)
 ---
  
-## 🛠️ Tool-uri MCP disponibile
+## Tool-uri MCP disponibile
  
 | Tool | Server | Tip | Descriere |
 |---|---|---|---|
@@ -63,7 +63,7 @@ client.js — MCP Client (port 5000)
  
 ---
  
-## 🚀 Instalare și pornire
+## Instalare și pornire
  
 ### Cerințe
 - Node.js (versiunea LTS)
