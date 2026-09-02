@@ -145,7 +145,7 @@ Deschide `frontend/index.html` în Chrome.
  
 ---
  
-## 📁 Structura proiectului
+## Structura proiect
  
 ```
 proiect/
@@ -162,7 +162,7 @@ proiect/
  
 ---
  
-## 🔧 Tehnologii folosite
+## Tehnologii folosite
  
 | Tehnologie | Rol |
 |---|---|
@@ -178,7 +178,7 @@ proiect/
  
 ---
  
-## 🎯 Funcționalități
+## Funcționalități
  
 - **Limbaj natural** — utilizatorul scrie în română fără comenzi speciale
 - **3 surse de date** — RDF4J, REST și GraphQL interogate simultan
