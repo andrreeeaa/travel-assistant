@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistent de Călătorie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../frontend/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Asistent de Călătorie</h1>
+        <p class="subtitle">Întreabă-mă despre zboruri, hoteluri și atracții turistice!</p>
+
+
+        <div class="chat-box" id="chatBox">
+            <div class="mesaj mesaj-ai">Bună! Sunt asistentul tău de călătorie. Te pot ajuta cu informații despre zboruri, hoteluri și atracții turistice. Cu ce te pot ajuta?</div>
+        </div>
+
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="promptInput" 
+                placeholder="Scrie întrebarea ta aici..."
+                onkeypress="if(event.key === 'Enter') trimitePrompt()"
+            />
+            <button id="btnTrimite" onclick="trimitePrompt()">Trimite</button>
+        </div>
+    </div>
+
+    <script>
+        async function trimitePrompt() {
+            const input = document.getElementById('promptInput');
+            const prompt = input.value.trim();
+
+            if (!prompt) return;
+
+            const chatBox = document.getElementById('chatBox');
+            const btnTrimite = document.getElementById('btnTrimite');
+
+            const mesajUser = document.createElement('div');
+            mesajUser.className = 'mesaj mesaj-user';
+            mesajUser.textContent = prompt;
+            chatBox.appendChild(mesajUser);
+
+            input.value = '';
+            btnTrimite.disabled = true;
+            btnTrimite.textContent = 'Se incarca...';
+
+            const mesajLoading = document.createElement('div');
+            mesajLoading.className = 'mesaj mesaj-loading';
+            mesajLoading.textContent = 'Asistentul cauta informatii...';
+            chatBox.appendChild(mesajLoading);
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            try {
+                const raspuns = await fetch('http://localhost:5000/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ prompt: prompt })
+                });
+
+                const date = await raspuns.json();
+
+                chatBox.removeChild(mesajLoading);
+
+                const mesajAI = document.createElement('div'); 
+                mesajAI.className = 'mesaj mesaj-ai';
+                mesajAI.textContent = date.raspuns;
+                chatBox.appendChild(mesajAI);
+
+            } catch (eroare) {
+                chatBox.removeChild(mesajLoading);
+
+                const mesajEroare = document.createElement('div');
+                mesajEroare.className = 'mesaj mesaj-ai';
+                mesajEroare.textContent = 'A aparut o eroare. Verifica daca serverele sunt pornite.';
+                chatBox.appendChild(mesajEroare);
+
+                console.error('Eroare:', eroare);
+            }
+
+            btnTrimite.disabled = false;
+            btnTrimite.textContent = 'Trimite';
+
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>

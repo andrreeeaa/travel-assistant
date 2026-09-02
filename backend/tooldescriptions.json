@@ -1,0 +1,158 @@
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "getZboruriDupaDestinatie",
+        "description": "Extrage lista zborurilor disponibile din baza de date RDF4J. Poate fi filtrata dupa orasul destinatie. Daca nu se specifica destinatia, returneaza toate zborurile.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "destinatie": {
+              "type": "string",
+              "description": "Orasul destinatie pentru care se cauta zboruri. Daca nu este furnizat se returneaza toate zborurile."
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "adaugaZbor",
+        "description": "Adauga un zbor nou in baza de date RDF4J cu toate detaliile necesare.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "description": "Numele descriptiv al zborului. Exemplu: Cursa 303 Cluj-Madrid."
+            },
+            "avionId": {
+              "type": "string",
+              "description": "Identificatorul avionului care opereaza cursa. Exemple: Avion1, Avion2, Avion3."
+            },
+            "origine": {
+              "type": "string",
+              "description": "Orasul din care pleaca zborul."
+            },
+            "destinatie": {
+              "type": "string",
+              "description": "Orasul spre care se indreapta zborul."
+            },
+            "pretBilet": {
+              "type": "number",
+              "description": "Pretul unui bilet exprimat in euro. Exemplu: 150."
+            },
+            "durata": {
+              "type": "number",
+              "description": "Durata zborului exprimata in minute. Exemplu: 180 pentru un zbor de 3 ore."
+            }
+          },
+          "required": ["label", "avionId", "origine", "destinatie", "pretBilet", "durata"]
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+          "name": "getHotelsDupaOras",
+          "description": "Returneaza lista hotelurilor disponibile filtrate dupa orasul destinatie. Daca nu se specifica orasul, returneaza toate hotelurile. Include si informatii despre camerele disponibile.",
+          "parameters": {
+              "type": "object",
+              "properties": {
+                  "oras": {
+                      "type": "string",
+                      "description": "Orasul pentru care se cauta hoteluri. Daca nu este furnizat se returneaza toate hotelurile."
+                  }
+              },
+              "required": []
+          }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "adaugaHotel",
+        "description": "Adauga un hotel nou in baza de date JSON cu toate detaliile necesare.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "nume": {
+                    "type": "string",
+                    "description": "Numele hotelului. Exemplu: Hotel Central Paris."
+                },
+                "oras": {
+                    "type": "string",
+                    "description": "Orasul unde se afla hotelul. Exemplu: Paris."
+                },
+                "tara": {
+                    "type": "string",
+                    "description": "Tara unde se afla hotelul. Exemplu: Franta."
+                },
+                "stele": {
+                    "type": "number",
+                    "description": "Numarul de stele al hotelului, intre 1 si 5."
+                },
+                "pretPeNoapte": {
+                    "type": "number",
+                    "description": "Pretul pe noapte in euro. Exemplu: 150."
+                }
+            },
+            "required": ["nume", "oras", "tara", "stele", "pretPeNoapte"]
+        }
+      }
+    },
+    {
+    "type": "function",
+    "function": {
+        "name": "getAtractiiDupaOras",
+        "description": "Returneaza lista atractiilor turistice dintr-un oras. Include monumente, muzee, parcuri si alte atractii. Daca nu se specifica orasul, returneaza atractiile din toate destinatiile disponibile.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "oras": {
+                    "type": "string",
+                    "description": "Orasul pentru care se cauta atractii turistice. Exemple: Paris, Roma, Londra, Barcelona, Berlin."
+                }
+            },
+            "required": []
+        }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+        "name": "adaugaAtractie",
+        "description": "Adauga o atractie turistica noua pentru o destinatie existenta.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "destinationId": {
+                    "type": "number",
+                    "description": "ID-ul destinatiei unde se afla atractia. Paris=1, Roma=2, Londra=3, Barcelona=4, Berlin=5."
+                },
+                "nume": {
+                    "type": "string",
+                    "description": "Numele atractiei turistice. Exemplu: Turnul Eiffel."
+                },
+                "tip": {
+                    "type": "string",
+                    "description": "Tipul atractiei: monument, muzeu, parc, atractie."
+                },
+                "pretEuro": {
+                    "type": "number",
+                    "description": "Pretul biletului in euro. 0 daca e gratuit."
+                },
+                "rating": {
+                    "type": "number",
+                    "description": "Rating-ul atractiei de la 1 la 5."
+                }
+            },
+            "required": ["destinationId", "nume", "tip", "pretEuro", "rating"]
+        }
+    }
+  }
+  ]
+}

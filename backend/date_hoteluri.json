@@ -1,0 +1,188 @@
+{
+    "hotels": [
+        {
+            "id": 1,
+            "name": "Hotel Eiffel Bloom",
+            "city": "Paris",
+            "country": "Franta",
+            "stars": 4
+        },
+        {
+            "id": 2,
+            "name": "Hotel Le Marais",
+            "city": "Paris",
+            "country": "Franta",
+            "stars": 3
+        },
+        {
+            "id": 3,
+            "name": "Hotel Colosseum View",
+            "city": "Roma",
+            "country": "Italia",
+            "stars": 4
+        },
+        {
+            "id": 4,
+            "name": "Hotel Roma Central",
+            "city": "Roma",
+            "country": "Italia",
+            "stars": 3
+        },
+        {
+            "id": 5,
+            "name": "The London Suite",
+            "city": "Londra",
+            "country": "Marea Britanie",
+            "stars": 5
+        },
+        {
+            "id": 6,
+            "name": "Hotel London Bridge",
+            "city": "Londra",
+            "country": "Marea Britanie",
+            "stars": 3
+        },
+        {
+            "id": 7,
+            "name": "Hotel Barcelona Arts",
+            "city": "Barcelona",
+            "country": "Spania",
+            "stars": 5
+        },
+        {
+            "id": 8,
+            "name": "Hotel Berlin Mitte",
+            "city": "Berlin",
+            "country": "Germania",
+            "stars": 4
+        },
+        {
+            "id": 9, 
+            "name": "Hotel Arts Barcelona", 
+            "city": "Barcelona", 
+            "country": "Spania", 
+            "stars": 5
+        },
+        {
+            "id": 10, 
+            "name": "Hotel Catalunya", 
+            "city": "Barcelona", 
+            "country": "Spania", 
+            "stars": 3
+        },
+        {
+            "id": 11, 
+            "name": "Hotel Madrid Central", 
+            "city": "Madrid", 
+            "country": "Spania", 
+            "stars": 4
+        }
+    ],
+    "rooms": [
+        {
+            "id": 1,
+            "hotelId": 1,
+            "type": "single",
+            "pricePerNight": 120,
+            "available": true
+        },
+        {
+            "id": 2,
+            "hotelId": 1,
+            "type": "double",
+            "pricePerNight": 180,
+            "available": true
+        },
+        {
+            "id": 3,
+            "hotelId": 2,
+            "type": "single",
+            "pricePerNight": 80,
+            "available": true
+        },
+        {
+            "id": 4,
+            "hotelId": 2,
+            "type": "double",
+            "pricePerNight": 130,
+            "available": true
+        },
+        {
+            "id": 5,
+            "hotelId": 3,
+            "type": "single",
+            "pricePerNight": 110,
+            "available": true
+        },
+        {
+            "id": 6,
+            "hotelId": 3,
+            "type": "double",
+            "pricePerNight": 160,
+            "available": false
+        },
+        {
+            "id": 7,
+            "hotelId": 4,
+            "type": "single",
+            "pricePerNight": 75,
+            "available": true
+        },
+        {
+            "id": 8,
+            "hotelId": 5,
+            "type": "suite",
+            "pricePerNight": 400,
+            "available": true
+        },
+        {
+            "id": 9,
+            "hotelId": 6,
+            "type": "double",
+            "pricePerNight": 150,
+            "available": true
+        },
+        {
+            "id": 10,
+            "hotelId": 7,
+            "type": "suite",
+            "pricePerNight": 350,
+            "available": true
+        },
+        {
+            "id": 11,
+            "hotelId": 8,
+            "type": "single",
+            "pricePerNight": 100,
+            "available": true
+        },
+        {
+            "id": 12, 
+            "hotelId": 9, 
+            "type": "double", 
+            "pricePerNight": 250, 
+            "available": true
+        },
+        {
+            "id": 13, 
+            "hotelId": 9, 
+            "type": "suite", 
+            "pricePerNight": 400, 
+            "available": true
+        },
+        {
+            "id": 14, 
+            "hotelId": 10, 
+            "type": "single", 
+            "pricePerNight": 90, 
+            "available": true
+        },
+        {
+            "id": 15, 
+            "hotelId": 11, 
+            "type": "single", 
+            "pricePerNight": 150, 
+            "available": true
+        }
+    ]
+}

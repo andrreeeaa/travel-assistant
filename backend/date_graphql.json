@@ -1,0 +1,175 @@
+{
+    "destinations": [
+        {
+            "id": 1,
+            "city": "Paris",
+            "country": "Franta",
+            "language": "Franceza",
+            "currency": "Euro"
+        },
+        {
+            "id": 2,
+            "city": "Roma",
+            "country": "Italia",
+            "language": "Italiana",
+            "currency": "Euro"
+        },
+        {
+            "id": 3,
+            "city": "Londra",
+            "country": "Marea Britanie",
+            "language": "Engleza",
+            "currency": "Lira Sterlina"
+        },
+        {
+            "id": 4,
+            "city": "Barcelona",
+            "country": "Spania",
+            "language": "Spaniola",
+            "currency": "Euro"
+        },
+        {
+            "id": 5,
+            "city": "Berlin",
+            "country": "Germania",
+            "language": "Germana",
+            "currency": "Euro"
+        },
+        {
+            "id": 6, 
+            "city": "Barcelona", 
+            "country": "Spania", 
+            "language": "Catalana", 
+            "currency": "Euro"
+        },
+        {
+            "id": 7, 
+            "city": "Madrid", 
+            "country": "Spania", 
+            "language": "Spaniola", 
+            "currency": "Euro"
+        }
+    ],
+    "attractions": [
+        {
+            "id": 1,
+            "destination_id": 1,
+            "name": "Turnul Eiffel",
+            "type": "monument",
+            "priceEuro": 25,
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "destination_id": 1,
+            "name": "Muzeul Luvru",
+            "type": "muzeu",
+            "priceEuro": 17,
+            "rating": 5
+        },
+        {
+            "id": 3,
+            "destination_id": 1,
+            "name": "Notre Dame",
+            "type": "monument",
+            "priceEuro": 0,
+            "rating": 5
+        },
+        {
+            "id": 4,
+            "destination_id": 2,
+            "name": "Colosseum",
+            "type": "monument",
+            "priceEuro": 16,
+            "rating": 5
+        },
+        {
+            "id": 5,
+            "destination_id": 2,
+            "name": "Muzeul Vatican",
+            "type": "muzeu",
+            "priceEuro": 20,
+            "rating": 5
+        },
+        {
+            "id": 6,
+            "destination_id": 2,
+            "name": "Fontana di Trevi",
+            "type": "monument",
+            "priceEuro": 0,
+            "rating": 4
+        },
+        {
+            "id": 7,
+            "destination_id": 3,
+            "name": "Turnul Londrei",
+            "type": "monument",
+            "priceEuro": 30,
+            "rating": 4
+        },
+        {
+            "id": 8,
+            "destination_id": 3,
+            "name": "Muzeul Britanic",
+            "type": "muzeu",
+            "priceEuro": 0,
+            "rating": 5
+        },
+        {
+            "id": 9,
+            "destination_id": 3,
+            "name": "London Eye",
+            "type": "atractie",
+            "priceEuro": 27,
+            "rating": 4
+        },
+        {
+            "id": 10,
+            "destination_id": 4,
+            "name": "Sagrada Familia",
+            "type": "monument",
+            "priceEuro": 26,
+            "rating": 5
+        },
+        {
+            "id": 11,
+            "destination_id": 4,
+            "name": "Park Guell",
+            "type": "parc",
+            "priceEuro": 10,
+            "rating": 4
+        },
+        {
+            "id": 12,
+            "destination_id": 5,
+            "name": "Poarta Brandenburg",
+            "type": "monument",
+            "priceEuro": 0,
+            "rating": 4
+        },
+        {
+            "id": 13,
+            "destination_id": 5,
+            "name": "Muzeul Pergamon",
+            "type": "muzeu",
+            "priceEuro": 12,
+            "rating": 4
+        },
+        {
+            "id": 14, 
+            "destination_id": 6, 
+            "name": "Sagrada Familia", 
+            "type": "monument", 
+            "priceEuro": 26, 
+            "rating": 5
+        },
+        {
+            "id": 15, 
+            "destination_id": 7, 
+            "name": "Palatul Regal", 
+            "type": "monument", 
+            "priceEuro": 14, 
+            "rating": 4
+        }
+    ]
+}

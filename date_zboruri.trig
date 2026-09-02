@@ -1,0 +1,92 @@
+@prefix : <http://andreeaene.ro#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:flota {
+    :Avion1 a schema:Vehicle ;
+            schema:name "Boeing 737 YR-BGD" ;
+            :model "Boeing 737" ;
+            schema:vehicleSeatingCapacity 189 ;
+            schema:vehicleModelDate 2005 ;
+            schema:brand "TAROM" .
+
+    :Avion2 a schema:Vehicle ;
+            schema:name "Airbus A320 YR-LCA" ;
+            :model "Airbus A320" ;
+            schema:vehicleSeatingCapacity 150 ;
+            schema:vehicleModelDate 2010 ;
+            schema:brand "Blue Air" .
+
+    :Avion3 a schema:Vehicle ;
+            schema:name "Airbus A321 HA-LXA" ;
+            :model "Airbus A321" ;
+            schema:vehicleSeatingCapacity 230 ;
+            schema:vehicleModelDate 2015 ;
+            schema:brand "Wizz Air" .
+}
+
+:zboruri {
+    :Cursa101 a schema:Flight ;
+              schema:name "Cursa 101 Bucuresti-Paris" ;
+              :esteOperatDe :Avion1 ;
+              schema:arrivalLocation "Paris" ;
+              schema:departureLocation "Bucuresti" ;
+              schema:price 150 ;
+              schema:duration 180 ;
+              :taraDestinatie "Franta" .
+
+    :Cursa102 a schema:Flight ;
+              schema:name "Cursa 102 Bucuresti-Roma" ;
+              :esteOperatDe :Avion1 ;
+              schema:arrivalLocation "Roma" ;
+              schema:departureLocation "Bucuresti" ;
+              schema:price 120 ;
+              schema:duration 150 ;
+              :taraDestinatie "Italia" .
+
+    :Cursa201 a schema:Flight ;
+              schema:name "Cursa 201 Cluj-Londra" ;
+              :esteOperatDe :Avion2 ;
+              schema:arrivalLocation "Londra" ;
+              schema:departureLocation "Cluj-Napoca" ;
+              schema:price 200 ;
+              schema:duration 210 ;
+              :taraDestinatie "Marea Britanie" .
+
+    :Cursa202 a schema:Flight ;
+              schema:name "Cursa 202 Cluj-Barcelona" ;
+              :esteOperatDe :Avion2 ;
+              schema:arrivalLocation "Barcelona" ;
+              schema:departureLocation "Cluj-Napoca" ;
+              schema:price 180 ;
+              schema:duration 170 ;
+              :taraDestinatie "Spania" .
+
+    :Cursa301 a schema:Flight ;
+              schema:name "Cursa 301 Bucuresti-Berlin" ;
+              :esteOperatDe :Avion3 ;
+              schema:arrivalLocation "Berlin" ;
+              schema:departureLocation "Bucuresti" ;
+              schema:price 160 ;
+              schema:duration 160 ;
+              :taraDestinatie "Germania" .
+
+    :Cursa401 a schema:Flight ;
+              schema:name "Cursa 401 Bucuresti-Barcelona" ;
+              :esteOperatDe :Avion2 ;
+              schema:arrivalLocation "Barcelona" ;
+              schema:departureLocation "Bucuresti" ;
+              schema:price 180 ;
+              schema:duration 170 ;
+              :taraDestinatie "Spania" .
+
+    :Cursa402 a schema:Flight ;
+              schema:name "Cursa 402 Cluj-Madrid" ;
+              :esteOperatDe :Avion3 ;
+              schema:arrivalLocation "Madrid" ;
+              schema:departureLocation "Cluj-Napoca" ;
+              schema:price 200 ;
+              schema:duration 190 ;
+              :taraDestinatie "Spania" .
+}
