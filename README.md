@@ -1,6 +1,6 @@
-# Asistent de Călătorie — Proiect Web Semantic
+# AI travel assistant
  
-Un asistent de călătorie inteligent care combină 3 surse de date semantice cu un LLM (OpenAI GPT-4o-mini) prin arhitectura MCP (Model Context Protocol). Utilizatorul poate întreba în limbaj natural despre zboruri, hoteluri și atracții turistice.
+Un asistent de călătorie care combină 3 surse de date semantice cu un LLM (OpenAI GPT-4o-mini) prin arhitectura MCP (Model Context Protocol). Utilizatorul poate întreba în limbaj natural despre zboruri, hoteluri și atracții turistice.
  
 ---
  
@@ -41,13 +41,13 @@ client.js — MCP Client (port 5000)
 - **Fișier date:** `data-rest.json`
 - **Entități:** `hotels` și `rooms`
 - **Relație:** one-to-many — un hotel are mai multe tipuri de camere
-- **Port:** 4000 (obligatoriu conform cerințelor)
+- **Port:** 4000 
 ### 3. JSON-GraphQL-Server — Destinații și Atracții Turistice
 - **Tehnologie:** GraphQL
 - **Fișier date:** `date_graphql.json`
 - **Entități:** `destinations` și `attractions`
 - **Relație:** one-to-many — o destinație are mai multe atracții turistice
-- **Port:** 3000 (obligatoriu conform cerințelor)
+- **Port:** 3000
 ---
  
 ## Tool-uri MCP disponibile
@@ -66,7 +66,7 @@ client.js — MCP Client (port 5000)
 ## Instalare și pornire
  
 ### Cerințe
-- Node.js (versiunea LTS)
+- Node.js 
 - RDF4J Server instalat local
 - Cont OpenAI cu API key
 ### 1. Clonează repository-ul
